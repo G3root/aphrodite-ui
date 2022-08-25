@@ -1,4 +1,4 @@
-# Arc UI
+# Aphrodite UI
 
 A Collection of high-quality accessible UI components
 
