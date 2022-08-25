@@ -1,0 +1,20 @@
+{
+  "name": "@aphrodite-ui/react",
+  "version": "0.0.0",
+  "description": "",
+  "keywords": [],
+  "homepage": "https://github.com/G3root/aphrodite-ui#readme",
+  "bugs": {
+    "url": "https://github.com/G3root/aphrodite-ui/issues"
+  },
+  "license": "MIT",
+  "author": "Nafees Nazik <nafeesnazik21@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/G3root/aphrodite-ui.git"
+  },
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  }
+}
