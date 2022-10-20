@@ -92,11 +92,14 @@ importers:
       '@types/react': ^18.0.17
       '@types/react-dom': ^18.0.6
       autoprefixer: ^10.4.12
+      cva: npm:class-variance-authority@^0.2.4
       postcss: ^8.4.18
       react: ^18.2.0
       react-dom: ^18.2.0
       tailwindcss: ^3.2.0
       tsup: 6.0.1
+    dependencies:
+      cva: /class-variance-authority/0.2.4
     devDependencies:
       '@ladle/react': 2.4.5_biqbaboplfbrettd7655fr4n2y
       '@types/react': 18.0.17
@@ -5390,6 +5393,15 @@ packages:
       isobject: 3.0.1
       static-extend: 0.1.2
     dev: true
+
+  /class-variance-authority/0.2.4:
+    resolution: {integrity: sha512-JJKn9ESARiNEBBRdTSPB9/SwaPb+wi19DMX/r8BVSyp1dxHa3JyUxa2GQjEVag5rBi+O3pL64UZ0XhnQsMz+3w==}
+    peerDependencies:
+      typescript: '>= 4.5.5 < 5'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+    dev: false
 
   /classnames/2.3.2:
     resolution: {integrity: sha512-CSbhY4cFEJRe6/GQzIk5qXZ4Jeg5pcsP7b5peFSDpffpe1cqjASH/n9UTjBwOp6XpMSTwQ8Za2K5V02ueA7Tmw==}
