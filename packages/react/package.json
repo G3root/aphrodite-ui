@@ -20,27 +20,23 @@
   "files": [
     "dist"
   ],
-  "main": "dist/index.js",
-  "module": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "exports": {
+    "require": "./dist/index.js",
+    "import": "./dist/index.mjs"
+  },
+  "types": "./dist/index.d.ts",
   "scripts": {
-    "build": "NODE_ENV=production rollup -c"
+    "build-fast": "tsup src/index.ts --format cjs,esm",
+    "build": "pnpm run build-fast --dts-resolve"
   },
   "devDependencies": {
-    "@rollup/plugin-json": "^4.1.0",
     "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
-    "@vanilla-extract/rollup-plugin": "^1.1.0",
-    "esbuild": "^0.15.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "rollup": "^2.78.1",
-    "rollup-plugin-dts": "^4.2.2",
-    "rollup-plugin-esbuild": "^4.10.1",
-    "rollup-plugin-node-externals": "^4.1.1"
-  },
-  "dependencies": {
-    "@vanilla-extract/css": "^1.7.3"
+    "tsup": "6.0.1"
   },
   "peerDependencies": {
     "react": ">= 16.8.0",
