@@ -29,13 +29,19 @@
   "types": "./dist/index.d.ts",
   "scripts": {
     "build-fast": "tsup src/index.ts --format cjs,esm",
-    "build": "pnpm run build-fast --dts-resolve"
+    "build": "pnpm run build-fast --dts-resolve",
+    "storybook": "yarn ladle serve",
+    "build-storybook": "yarn ladle build"
   },
   "devDependencies": {
+    "@ladle/react": "^2.4.5",
     "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
+    "autoprefixer": "^10.4.12",
+    "postcss": "^8.4.18",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "tailwindcss": "^3.2.0",
     "tsup": "6.0.1"
   },
   "peerDependencies": {
