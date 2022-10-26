@@ -11,7 +11,7 @@ const colors = {
   ...red
 };
 export const lightTheme: Partial<Record<TokenKey, any>> = {
-  //solid button variant
+  //✨ solid button variant
   '--btn-sld-pri-bg': colors.violet9,
   '--btn-sld-suc-bg': colors.green9,
   '--btn-sld-dan-bg': colors.red9,
@@ -24,7 +24,8 @@ export const lightTheme: Partial<Record<TokenKey, any>> = {
   '--btn-sld-war-hov-bg': colors.yellow10,
   '--btn-sld-inf-hov-bg': colors.blue10,
   '--btn-sld-neu-hov-bg': colors.gray10,
-  //flat button variant
+
+  //✨ flat button variant
   '--btn-flt-pri-bg': colors.violet3,
   '--btn-flt-suc-bg': colors.green3,
   '--btn-flt-dan-bg': colors.red3,
@@ -43,7 +44,8 @@ export const lightTheme: Partial<Record<TokenKey, any>> = {
   '--btn-flt-war-txt': colors.yellow11,
   '--btn-flt-inf-txt': colors.blue11,
   '--btn-flt-neu-txt': colors.gray11,
-  // outline button variant
+
+  //✨ outline button variant
   '--btn-out-pri-txt': cssVar('btn-flt-pri-txt'),
   '--btn-out-suc-txt': cssVar('btn-flt-suc-txt'),
   '--btn-out-dan-txt': cssVar('btn-flt-dan-txt'),
@@ -67,5 +69,27 @@ export const lightTheme: Partial<Record<TokenKey, any>> = {
   '--btn-out-dan-hov-bg': cssVar('btn-flt-dan-hov-bg'),
   '--btn-out-war-hov-bg': cssVar('btn-flt-war-hov-bg'),
   '--btn-out-inf-hov-bg': cssVar('btn-flt-inf-hov-bg'),
-  '--btn-out-neu-hov-bg': cssVar('btn-flt-neu-hov-bg')
+  '--btn-out-neu-hov-bg': cssVar('btn-flt-neu-hov-bg'),
+
+  //✨ ghost variant
+  '--btn-gho-pri-txt': cssVar('btn-flt-pri-txt'),
+  '--btn-gho-suc-txt': cssVar('btn-flt-suc-txt'),
+  '--btn-gho-dan-txt': cssVar('btn-flt-dan-txt'),
+  '--btn-gho-war-txt': cssVar('btn-flt-war-txt'),
+  '--btn-gho-inf-txt': cssVar('btn-flt-inf-txt'),
+  '--btn-gho-neu-txt': cssVar('btn-flt-neu-txt'),
+  '--btn-gho-pri-hov-bg': cssVar('btn-flt-pri-hov-bg'),
+  '--btn-gho-suc-hov-bg': cssVar('btn-flt-suc-hov-bg'),
+  '--btn-gho-dan-hov-bg': cssVar('btn-flt-dan-hov-bg'),
+  '--btn-gho-war-hov-bg': cssVar('btn-flt-war-hov-bg'),
+  '--btn-gho-inf-hov-bg': cssVar('btn-flt-inf-hov-bg'),
+  '--btn-gho-neu-hov-bg': cssVar('btn-flt-neu-hov-bg'),
+
+  //✨ text variant
+  '--btn-lin-pri-txt': cssVar('btn-flt-pri-txt'),
+  '--btn-lin-suc-txt': cssVar('btn-flt-suc-txt'),
+  '--btn-lin-dan-txt': cssVar('btn-flt-dan-txt'),
+  '--btn-lin-war-txt': cssVar('btn-flt-war-txt'),
+  '--btn-lin-inf-txt': cssVar('btn-flt-inf-txt'),
+  '--btn-lin-neu-txt': cssVar('btn-flt-neu-txt')
 };
