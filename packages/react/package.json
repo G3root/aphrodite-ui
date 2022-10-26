@@ -29,9 +29,7 @@
   "types": "./dist/index.d.ts",
   "scripts": {
     "build-fast": "tsup src/index.ts --format cjs,esm",
-    "build": "pnpm run build-fast --dts-resolve",
-    "storybook": "yarn ladle serve",
-    "build-storybook": "yarn ladle build"
+    "build": "pnpm run build-fast --dts-resolve"
   },
   "devDependencies": {
     "@ladle/react": "^2.4.5",
@@ -49,6 +47,7 @@
     "react-dom": ">= 16.8.0"
   },
   "dependencies": {
+    "ariakit": "2.0.0-next.41",
     "cva": "npm:class-variance-authority@^0.2.4"
   }
 }
