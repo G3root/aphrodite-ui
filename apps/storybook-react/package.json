@@ -3,7 +3,8 @@
   "private": true,
   "scripts": {
     "dev": "ladle serve",
-    "build": "ladle build"
+    "build": "ladle build",
+    "start": "ladle preview"
   },
   "dependencies": {
     "@aphrodite-ui/core": "workspace:*",
