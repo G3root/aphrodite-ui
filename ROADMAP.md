@@ -4,7 +4,8 @@
 
 |             | Development | A11y check | Tests | Storybook | Docs |
 | ----------- | :---------: | :--------: | :---: | :-------: | :--: |
-| Button      |             |            |       |           |      |
+| Button      |     ✅      |            |       |    ✅     |      |
+| Spinner     |     ✅      |            |       |    n/a    |      |
 | Icon Button |             |            |       |           |      |
 | Text Area   |             |            |       |           |      |
 | Input       |             |            |       |           |      |
