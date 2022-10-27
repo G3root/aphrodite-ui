@@ -1,6 +1,6 @@
 {
   "name": "storybook-react",
-  "private": "true",
+  "private": true,
   "scripts": {
     "dev": "ladle serve",
     "build": "ladle build"
