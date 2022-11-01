@@ -6,8 +6,10 @@ importers:
     specifiers:
       '@changesets/changelog-github': ^0.4.7
       '@changesets/cli': ^2.25.0
+      '@changesets/get-github-info': ^0.5.1
       '@commitlint/cli': ^17.0.3
       '@commitlint/config-conventional': ^17.0.3
+      dotenv: ^16.0.3
       eslint: ^8.22.0
       husky: ^8.0.1
       lint-staged: ^13.0.3
@@ -17,8 +19,10 @@ importers:
     devDependencies:
       '@changesets/changelog-github': 0.4.7
       '@changesets/cli': 2.25.0
+      '@changesets/get-github-info': 0.5.1
       '@commitlint/cli': 17.0.3
       '@commitlint/config-conventional': 17.0.3
+      dotenv: 16.0.3
       eslint: 8.22.0
       husky: 8.0.1
       lint-staged: 13.0.3
@@ -2794,6 +2798,11 @@ packages:
     engines: {node: '>=8'}
     dependencies:
       is-obj: 2.0.0
+    dev: true
+
+  /dotenv/16.0.3:
+    resolution: {integrity: sha512-7GO6HghkA5fYG9TYnNxi14/7K9f5occMlp3zXAuSxn7CKCxt9xbNWG7yF8hTCSUchlfWSe3uLmlPfigevRItzQ==}
+    engines: {node: '>=12'}
     dev: true
 
   /dotenv/8.6.0:
