@@ -10,7 +10,7 @@ interface pluginArgs {
   };
 }
 
-export const aphroditePlugin = (data: pluginArgs) =>
+export const aphroditePlugin = (data?: pluginArgs) =>
   plugin(({ addBase, addComponents }) => {
     addBase({
       ':root': {
@@ -19,14 +19,14 @@ export const aphroditePlugin = (data: pluginArgs) =>
         '--hi-contrast': cssVar('neutral', 12),
         '--sld-btn-neu-bg': cssVar('neutral', 12),
         '--sld-btn-neu-hov-bg': '#393e46',
-        ...data.theme?.light
+        ...data?.theme?.light
       },
       '[data-theme="dark"]': {
         ...darkTheme,
         '--lo-contrast': '#202028',
         '--sld-btn-neu-bg': cssVar('neutral', 3),
         '--sld-btn-neu-hov-bg': cssVar('neutral', 4),
-        ...data.theme?.dark
+        ...data?.theme?.dark
       }
     });
     addComponents({
