@@ -1,5 +1,11 @@
 # @aphrodite-ui/core
 
+## 0.1.1
+
+### Patch Changes
+
+- Make theme tokens configurable, Use `Radix colors` for theme tokens Add `Icon Button` and `Center` component, by [@G3root](https://github.com/G3root) (See [`ed2187b`](https://github.com/G3root/aphrodite-ui/commit/ed2187be4b2dc3d658748a01148f9d2ea92b8d1b))
+
 ## 0.1.0
 
 ### Minor Changes
