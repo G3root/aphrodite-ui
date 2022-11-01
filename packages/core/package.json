@@ -29,7 +29,8 @@
   "types": "./dist/index.d.ts",
   "scripts": {
     "build-fast": "tsup src/index.ts --format cjs,esm",
-    "build": "pnpm run build-fast --dts-resolve"
+    "build": "pnpm run build-fast --dts-resolve",
+    "dev": "pnpm run build --watch"
   },
   "devDependencies": {
     "@radix-ui/colors": "^0.1.8",

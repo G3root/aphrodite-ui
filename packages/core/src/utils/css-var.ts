@@ -1,3 +1,5 @@
-import { TokenValue } from '../types';
+import { ThemeRange, Tokens } from '../types';
 
-export const cssVar = (value: TokenValue) => `var(--${value})`;
+export const cssVar = (token: Tokens, range: ThemeRange) => {
+  return `var(--${token}-${range})`;
+};

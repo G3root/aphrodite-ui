@@ -1,7 +1,18 @@
-export type Colors = 'pri' | 'dan' | 'suc' | 'war' | 'inf' | 'neu';
-export type Properties = 'bg' | 'hov-bg' | 'txt' | 'bor' | 'hov-bor';
-export type Components = 'btn';
-export type BtnVariants = 'sld' | 'flt' | 'out' | 'gho' | 'lin';
+export type ThemeRange = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
 
-export type TokenValue = `${Components}-${BtnVariants}-${Colors}-${Properties}`;
-export type TokenKey = `--${Components}-${BtnVariants}-${Colors}-${Properties}`;
+export type Tokens =
+  | 'black-alpha'
+  | 'white-alpha'
+  | 'primary'
+  | 'neutral'
+  | 'success'
+  | 'info'
+  | 'warning'
+  | 'danger';
+
+export type TokenKey =
+  | `--${Tokens}-${ThemeRange}`
+  | '--lo-contrast'
+  | '--hi-contrast';
+
+export type ColorTokens = Partial<Record<TokenKey, string>>;
