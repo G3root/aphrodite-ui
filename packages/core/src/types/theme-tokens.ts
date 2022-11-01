@@ -10,6 +10,9 @@ export type Tokens =
   | 'warning'
   | 'danger';
 
-export type TokenKey = `--${Tokens}-${ThemeRange}`;
+export type TokenKey =
+  | `--${Tokens}-${ThemeRange}`
+  | '--lo-contrast'
+  | '--hi-contrast';
 
 export type ColorTokens = Partial<Record<TokenKey, string>>;

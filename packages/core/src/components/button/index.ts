@@ -1,16 +1,19 @@
 import type * as CSS from 'csstype';
 import { Colors } from '../../constants';
+import { cssVar } from '../../utils';
 
 function solidVariant() {
-  const variant = 'sld';
   const styles = Colors.reduce<
     Record<string, CSS.Properties | Record<string, CSS.Properties>>
   >((prev, color) => {
-    prev[`&.btn-${color}`] = {
-      backgroundColor: `var(--btn-${variant}-${color}-bg)`,
-      color: color === 'war' ? 'black' : 'white',
+    const isNeutral = color === 'neutral';
+    const neutralBg = 'var(--sld-btn-neu-bg)';
+    const neutralHovBg = 'var(--sld-btn-neu-hov-bg)';
+    prev[`&.btn-${color.substring(0, 3)}`] = {
+      backgroundColor: isNeutral ? neutralBg : cssVar(color, 9),
+      color: color === 'warning' ? 'black' : 'white',
       '&:not(:disabled):hover': {
-        backgroundColor: `var(--btn-${variant}-${color}-hov-bg)`
+        backgroundColor: isNeutral ? neutralHovBg : cssVar(color, 10)
       }
     };
     return prev;
@@ -19,15 +22,14 @@ function solidVariant() {
 }
 
 function flatVariant() {
-  const variant = 'flt';
   const styles = Colors.reduce<
     Record<string, CSS.Properties | Record<string, CSS.Properties>>
   >((prev, color) => {
-    prev[`&.btn-${color}`] = {
-      backgroundColor: `var(--btn-${variant}-${color}-bg)`,
-      color: `var(--btn-${variant}-${color}-txt)`,
+    prev[`&.btn-${color.substring(0, 3)}`] = {
+      backgroundColor: cssVar(color, 3),
+      color: cssVar(color, 11),
       '&:not(:disabled):hover': {
-        backgroundColor: `var(--btn-${variant}-${color}-hov-bg)`
+        backgroundColor: cssVar(color, 4)
       }
     };
     return prev;
@@ -36,16 +38,15 @@ function flatVariant() {
 }
 
 function outLineVariant() {
-  const variant = 'out';
   const styles = Colors.reduce<
     Record<string, CSS.Properties | Record<string, CSS.Properties>>
   >((prev, color) => {
-    prev[`&.btn-${color}`] = {
-      borderColor: `var(--btn-${variant}-${color}-bor)`,
-      color: `var(--btn-${variant}-${color}-txt)`,
+    const isNeutral = color === 'neutral';
+    prev[`&.btn-${color.substring(0, 3)}`] = {
+      borderColor: cssVar(color, 7),
+      color: isNeutral ? cssVar(color, 12) : cssVar(color, 11),
       '&:not(:disabled):hover': {
-        backgroundColor: `var(--btn-${variant}-${color}-hov-bg)`,
-        borderColor: `var(--btn-${variant}-${color}-hov-bor)`
+        borderColor: cssVar(color, 8)
       }
     };
     return prev;
@@ -54,14 +55,14 @@ function outLineVariant() {
 }
 
 function ghostVariant() {
-  const variant = 'gho';
   const styles = Colors.reduce<
     Record<string, CSS.Properties | Record<string, CSS.Properties>>
   >((prev, color) => {
-    prev[`&.btn-${color}`] = {
-      color: `var(--btn-${variant}-${color}-txt)`,
+    const isNeutral = color === 'neutral';
+    prev[`&.btn-${color.substring(0, 3)}`] = {
+      color: isNeutral ? cssVar(color, 12) : cssVar(color, 11),
       '&:not(:disabled):hover': {
-        backgroundColor: `var(--btn-${variant}-${color}-hov-bg)`
+        backgroundColor: cssVar(color, 4)
       }
     };
     return prev;
@@ -70,12 +71,12 @@ function ghostVariant() {
 }
 
 function linkVariant() {
-  const variant = 'lin';
   const styles = Colors.reduce<
     Record<string, CSS.Properties | Record<string, CSS.Properties>>
   >((prev, color) => {
-    prev[`&.btn-${color}`] = {
-      color: `var(--btn-${variant}-${color}-txt)`,
+    const isNeutral = color === 'neutral';
+    prev[`&.btn-${color.substring(0, 3)}`] = {
+      color: isNeutral ? cssVar(color, 12) : cssVar(color, 11),
       '&:not(:disabled):hover': {
         textDecoration: 'underline'
       }
