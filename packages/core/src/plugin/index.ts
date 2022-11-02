@@ -22,7 +22,7 @@ export const aphroditePlugin = plugin.withOptions(
       ...darkThemeTokens,
       ...data?.theme?.dark
     };
-    return ({ addBase, addComponents }) => {
+    return ({ addBase, addComponents, addVariant }) => {
       addBase({
         ':root': root,
         '[data-theme="dark"]': dark
@@ -30,6 +30,7 @@ export const aphroditePlugin = plugin.withOptions(
       addComponents({
         ...button
       });
+      addVariant('not-disabled', '&:not(:disabled)');
     };
   },
 
