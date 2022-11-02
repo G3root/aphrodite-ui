@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import { Button } from './button';
-import Icon from './mock-icon';
+import Icon from '../mocks/mock-icon';
 import { expect, it, test } from 'vitest';
 
 it('should render children', () => {
