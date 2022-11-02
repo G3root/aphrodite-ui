@@ -1,7 +1,10 @@
 import plugin from 'tailwindcss/plugin';
-import { darkTheme, lightTheme } from '../theme';
+import {
+  darkThemeTokens,
+  generateThemeColors,
+  lightThemeTokens
+} from '../theme';
 import { button } from '../components';
-import { cssVar } from '../utils';
 import { ColorTokens } from '../types';
 interface pluginArgs {
   theme?: {
@@ -10,26 +13,34 @@ interface pluginArgs {
   };
 }
 
-export const aphroditePlugin = (data?: pluginArgs) =>
-  plugin(({ addBase, addComponents }) => {
-    addBase({
-      ':root': {
-        ...lightTheme,
-        '--lo-contrast': cssVar('neutral', 1),
-        '--hi-contrast': cssVar('neutral', 12),
-        '--sld-btn-neu-bg': cssVar('neutral', 12),
-        '--sld-btn-neu-hov-bg': '#393e46',
-        ...data?.theme?.light
-      },
-      '[data-theme="dark"]': {
-        ...darkTheme,
-        '--lo-contrast': '#202028',
-        '--sld-btn-neu-bg': cssVar('neutral', 3),
-        '--sld-btn-neu-hov-bg': cssVar('neutral', 4),
-        ...data?.theme?.dark
+export const aphroditePlugin = plugin.withOptions(
+  (data?: pluginArgs) => {
+    const root = { ...lightThemeTokens, ...data?.theme?.light };
+    const dark = {
+      ...darkThemeTokens,
+      ...data?.theme?.dark
+    };
+    return ({ addBase, addComponents }) => {
+      addBase({
+        ':root': root,
+        '[data-theme="dark"]': dark
+      });
+      addComponents({
+        ...button
+      });
+    };
+  },
+
+  () => {
+    const themeColors = generateThemeColors(lightThemeTokens);
+    console.log({ themeColors, lightThemeTokens });
+
+    return {
+      theme: {
+        extend: {
+          colors: themeColors
+        }
       }
-    });
-    addComponents({
-      ...button
-    });
-  });
+    };
+  }
+);
