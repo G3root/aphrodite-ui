@@ -1,3 +1,5 @@
+// credit: includes some snippets from https://github.com/brattonross/windy-radix-palette/blob/main/packages/palette/index.js
+
 import plugin from 'tailwindcss/plugin';
 import {
   darkThemeTokens,
