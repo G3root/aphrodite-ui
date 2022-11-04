@@ -20,6 +20,7 @@
     "typescript": "4.8.4"
   },
   "devDependencies": {
+    "@preact/signals-react": "^1.2.1",
     "contentlayer": "^0.2.8",
     "github-slugger": "^2.0.0",
     "next-contentlayer": "^0.2.8",
