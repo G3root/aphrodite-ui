@@ -45,6 +45,7 @@ importers:
       github-slugger: ^2.0.0
       next: 13.0.1
       next-contentlayer: ^0.2.8
+      next-themes: ^0.2.1
       postcss: ^8.4.18
       react: ^18.2.0
       react-dom: ^18.2.0
@@ -62,6 +63,7 @@ importers:
       eslint: 8.22.0
       eslint-config-next: 13.0.1_yv3nvntfnealqm77uomj2fi4ki
       next: 13.0.1_biqbaboplfbrettd7655fr4n2y
+      next-themes: 0.2.1_cuttyyug54cjzme6dhlgj6veu4
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
       typescript: 4.8.4
@@ -7108,6 +7110,18 @@ packages:
       - markdown-wasm
       - supports-color
     dev: true
+
+  /next-themes/0.2.1_cuttyyug54cjzme6dhlgj6veu4:
+    resolution: {integrity: sha512-B+AKNfYNIzh0vqQQKqQItTS8evEouKD7H5Hj3kmuPERwddR2TxvDSFZuTj6T7Jfn1oyeUyJMydPl1Bkxkh0W7A==}
+    peerDependencies:
+      next: '*'
+      react: '*'
+      react-dom: '*'
+    dependencies:
+      next: 13.0.1_biqbaboplfbrettd7655fr4n2y
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+    dev: false
 
   /next/13.0.1_biqbaboplfbrettd7655fr4n2y:
     resolution: {integrity: sha512-ErCNBPIeZMKFn6hX+ZBSlqZVgJIeitEqhGTuQUNmYXJ07/A71DZ7AJI8eyHYUdBb686LUpV1/oBdTq9RpzRVPg==}
