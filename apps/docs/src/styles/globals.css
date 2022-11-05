@@ -1,4 +1,94 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  color: var(--neutral-12);
+  background-color: var(--lo-contrast);
+}
+
+.nav {
+  box-shadow: 0 1px var(--neutral-4);
+}
+
+.docs:is(:where(h1, h2, h3, h4, h5, h6, th)) {
+  @apply lg:scroll-mt-32 scroll-mt-28;
+}
+
+h1.docs {
+  @apply text-4xl font-bold tracking-tight mt-2;
+}
+h2.docs {
+  @apply text-2xl font-semibold tracking-tight mt-10;
+  @apply pb-1 border-b border-neutral-6;
+}
+h3.docs {
+  @apply text-xl font-semibold tracking-tight mt-8;
+}
+h4.docs {
+  @apply text-lg font-semibold tracking-tight mt-8;
+}
+h5.docs {
+  @apply text-base font-semibold tracking-tight mt-8;
+}
+h6.docs {
+  @apply text-sm font-semibold tracking-tight mt-8;
+}
+ul.docs {
+  @apply list-disc ml-6 mt-6 first:mt-0;
+}
+li.docs {
+  @apply my-2;
+}
+ol.docs {
+  @apply list-decimal ml-6 mt-6;
+}
+blockquote.docs {
+  @apply italic pl-6 border-l-2 border-gray-300 text-gray-700;
+  @apply dark:border-gray-700 dark:text-gray-400;
+}
+h2.docs a {
+  @apply no-underline;
+}
+
+a.docs {
+  @apply text-primary-11 hover:underline;
+  text-underline-position: under;
+}
+p.docs {
+  @apply leading-7;
+}
+p.docs:not(:first-child),
+blockquote:not(:first-child),
+.table-container:not(:first-child) {
+  @apply mt-6;
+}
+
+code.docs {
+  @apply bg-black bg-opacity-5 border border-black border-opacity-5 rounded-md break-words;
+  @apply dark:bg-white dark:bg-opacity-10 dark:border-white dark:border-opacity-10;
+  font-size: 0.9em;
+  padding: 2px 0.25em;
+  box-decoration-break: clone;
+  font-feature-settings: 'rlig' 1, 'calt' 1, 'ss01' 1;
+}
+pre.docs {
+  /* content-visibility: auto; */
+  contain: paint;
+  @apply p-4 bg-slate-100 rounded-xl mt-6 mb-4 overflow-x-auto font-medium subpixel-antialiased;
+  @apply dark:bg-blue-300 dark:bg-opacity-10;
+  code {
+    line-height: 1.25rem;
+    @apply relative p-0 text-sm text-current bg-transparent dark:bg-transparent rounded-none border-none inline-block min-w-full;
+    .line.highlighted {
+      @apply before:block before:absolute before:h-5 before:bg-gray-500 before:bg-opacity-10 before:-inset-x-4 before:pointer-events-none before:select-none;
+      span {
+        @apply relative;
+      }
+    }
+  }
+}
+
+a.docs code {
+  @apply text-current no-underline;
+}
