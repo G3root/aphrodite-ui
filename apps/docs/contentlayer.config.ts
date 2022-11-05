@@ -49,7 +49,8 @@ const contentLayerConfig = makeSource({
   contentDirPath: 'src/pages',
   documentTypes: [Doc],
   mdx: {
-    remarkPlugins: [rehypeSlug, remarkGfm]
+    remarkPlugins: [remarkGfm],
+    rehypePlugins: [rehypeSlug]
   }
 });
 
