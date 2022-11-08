@@ -4,3 +4,46 @@ description: Getting Started.
 ---
 
 # Getting Started
+
+### Prerequisite
+
+You need `PostCSS`, `postcss-import`, `autoprefixer`
+and `Tailwind CSS` installed.
+
+```bash
+npm install -D tailwindcss postcss autoprefixer postcss-import
+```
+
+### installation
+
+Inside your React project directory, install Aphrodite UI by running the following:
+
+```bash
+npm install @aphrodite-ui/react @aphrodite-ui/core
+```
+
+### Setup
+
+1. Setup Tailwind CSS if not configured.
+
+```bash
+npx tailwindcss init
+```
+
+2. Configure your Tailwind CSS config file.
+
+```js {1,4-7,12}
+const { aphroditePlugin } = require('@aphrodite-ui/core');
+
+module.exports = {
+  content: [
+    './src/**/*.{js,ts,jsx,tsx}',
+    './node_modules/@aphrodite-ui/react/src/**/*.{js,ts,jsx,tsx}'
+  ],
+  darkMode: ['class', '[data-theme="dark"]'],
+  theme: {
+    extend: {}
+  },
+  plugins: [aphroditePlugin()]
+};
+```
