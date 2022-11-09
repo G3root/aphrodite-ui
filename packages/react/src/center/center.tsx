@@ -1,26 +1,16 @@
-import {
-  createComponent,
-  createElement,
-  createHook,
-  As,
-  Options,
-  Props
-} from '../utils';
-import { cx } from 'cva';
+import { cx, aphro, forwardRef, HTMLPolymorphicProps } from '~/system';
 
-const useCenter = createHook<CenterOptions>((props) => {
-  props = {
-    ...props,
-    className: cx('flex items-center justify-center', props.className)
-  };
-  return props;
+export interface CenterProps extends HTMLPolymorphicProps<'div'> {}
+
+export const Center = forwardRef<'div', CenterProps>(function Center(props) {
+  const { children, as, className, ...rest } = props;
+  return (
+    <aphro.div
+      as={as}
+      className={cx('flex items-center justify-center', className)}
+      {...rest}
+    >
+      {children}
+    </aphro.div>
+  );
 });
-
-export const Center = createComponent<CenterOptions>((props) => {
-  const htmlProps = useCenter(props);
-  return createElement('div', htmlProps);
-});
-
-type CenterOptions<T extends As = 'div'> = Options<T>;
-
-export type CenterProps<T extends As = 'div'> = Props<CenterOptions<T>>;

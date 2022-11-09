@@ -1,4 +1,25 @@
-import { polymorphicFactory } from '@polymorphic-factory/react';
+import {
+  polymorphicFactory,
+  AssignCommon,
+  ComponentWithAs,
+  DOMElements,
+  HTMLPolymorphicComponents,
+  HTMLPolymorphicProps,
+  MergeWithAs,
+  OmitCommonProps,
+  PropsOf,
+  forwardRef
+} from '@polymorphic-factory/react';
 export * from 'cva';
-export * from '@polymorphic-factory/react';
 export const aphro = polymorphicFactory();
+export {
+  AssignCommon,
+  ComponentWithAs,
+  DOMElements,
+  HTMLPolymorphicComponents,
+  HTMLPolymorphicProps,
+  MergeWithAs,
+  OmitCommonProps,
+  PropsOf,
+  forwardRef
+};
