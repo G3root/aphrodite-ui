@@ -1,2 +1,2 @@
 export * from './get-table-of-contents';
-export * from './find-anchors';
+export * from './pagination-utils';
