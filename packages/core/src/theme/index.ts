@@ -60,8 +60,6 @@ function generateThemeTokens() {
     const isDark = colorName.includes('Dark');
     const colorMap = isDark ? darkModeColors : rootColors;
 
-    console.log({ colorName });
-
     for (const [key, value] of Object.entries(colorObj)) {
       const scale = key.match(/\d+/g);
       const color = themeNameMap[colorName];

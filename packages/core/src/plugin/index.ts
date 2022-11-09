@@ -36,7 +36,6 @@ export const aphroditePlugin = plugin.withOptions(
 
   () => {
     const themeColors = generateThemeColors(lightThemeTokens);
-    console.log({ themeColors, lightThemeTokens });
 
     return {
       theme: {
