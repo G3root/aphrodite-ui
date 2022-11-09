@@ -1,4 +1,9 @@
-type Route = { title: string; routes?: { title: string; path: string }[] };
+export type RouteItem = { title: string; path: string };
+
+export type Route = {
+  title: string;
+  routes?: RouteItem[];
+};
 
 export const routes: Route[] = [
   {
