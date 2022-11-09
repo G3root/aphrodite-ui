@@ -3,18 +3,11 @@ import { allDocs, Doc } from 'contentlayer/generated';
 import { useMDXComponent } from 'next-contentlayer/hooks';
 import { DocsLayout } from '~/layouts';
 import { mdxComponents } from '~/components';
-import { FindAnchors, FindAnchorsReturn } from '~/utils';
 
-export default function Page({
-  doc,
-  anchors
-}: {
-  doc: Doc;
-  anchors: FindAnchorsReturn;
-}) {
+export default function Page({ doc }: { doc: Doc }) {
   const Component = useMDXComponent(doc.body.code);
   return (
-    <DocsLayout anchors={anchors} frontMatter={doc.frontMatter}>
+    <DocsLayout frontMatter={doc.frontMatter}>
       <Component components={mdxComponents} />
     </DocsLayout>
   );
@@ -37,6 +30,5 @@ export const getStaticProps = async (ctx: {
     doc._id.endsWith(`${params.join('/')}.mdx`)
   );
 
-  const anchors = FindAnchors();
-  return { props: { doc, anchors } };
+  return { props: { doc } };
 };
