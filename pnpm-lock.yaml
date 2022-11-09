@@ -146,6 +146,7 @@ importers:
   packages/react:
     specifiers:
       '@ladle/react': ^2.4.5
+      '@polymorphic-factory/react': ^0.1.2
       '@testing-library/dom': ^8.19.0
       '@testing-library/jest-dom': ^5.16.5
       '@testing-library/react': ^13.4.0
@@ -167,6 +168,7 @@ importers:
       vite: ^3.0.7
       vitest: ^0.24.5
     dependencies:
+      '@polymorphic-factory/react': 0.1.2_react@18.2.0
       ariakit: 2.0.0-next.41_biqbaboplfbrettd7655fr4n2y
       cva: /class-variance-authority/0.2.4
     devDependencies:
@@ -2505,6 +2507,14 @@ packages:
     resolution: {integrity: sha512-wlYG/U6ddW1ilXslnDLLQYJ8nd97W8JJTTfwkGhubx6dzW6SUkd+N4/MzTjjyZlrHQunxHtkHFvVpUKiROvFDw==}
     engines: {node: '>=14'}
     dev: true
+
+  /@polymorphic-factory/react/0.1.2_react@18.2.0:
+    resolution: {integrity: sha512-K4lPBudgY8gaHxKQ01+cEun/5qdlxlHZAJ0v/TorZQEWMPvPcAeoq+l9EUb4nfWbGrvCSSbhlNyesgttMPpvaw==}
+    peerDependencies:
+      react: '>=16.8 || >=17 || >18'
+    dependencies:
+      react: 18.2.0
+    dev: false
 
   /@preact/signals-core/1.2.2:
     resolution: {integrity: sha512-z3/bCj7rRA21RJb4FeJ4guCrD1CQbaURHkCTunUWQpxUMAFOPXCD8tSFqERyGrrcSb4T3Hrmdc1OAl0LXBHwiw==}

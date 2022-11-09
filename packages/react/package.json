@@ -60,6 +60,7 @@
     "react-dom": ">= 16.8.0"
   },
   "dependencies": {
+    "@polymorphic-factory/react": "^0.1.2",
     "ariakit": "2.0.0-next.41",
     "cva": "npm:class-variance-authority@^0.2.4"
   }
