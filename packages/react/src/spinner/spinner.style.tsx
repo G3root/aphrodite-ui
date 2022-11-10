@@ -1,7 +1,7 @@
 import { VariantProps } from '../utils';
-import { cva } from 'cva';
+import { cva } from '~/system';
 
-export const SpinnerInnerStyle = cva('animate-spin motion-reduce:hidden ', {
+export const spinnerStyle = cva('animate-spin motion-reduce:hidden ', {
   variants: {
     size: {
       xs: 'h-3 w-3',
@@ -16,4 +16,4 @@ export const SpinnerInnerStyle = cva('animate-spin motion-reduce:hidden ', {
   }
 });
 
-export type SpinnerInnerStyleProps = VariantProps<typeof SpinnerInnerStyle>;
+export type SpinnerStyleProps = VariantProps<typeof spinnerStyle>;

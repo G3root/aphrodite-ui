@@ -1,7 +1,7 @@
 import { VariantProps } from '../utils';
-import { cva } from 'cva';
+import { cva } from '~/system';
 
-export const ButtonInnerStyle = cva(
+export const buttonStyle = cva(
   'flex items-center font-medium text-center disabled:cursor-not-allowed btn ',
   {
     variants: {
@@ -72,4 +72,4 @@ export const ButtonInnerStyle = cva(
   }
 );
 
-export type ButtonInnerStyleProps = VariantProps<typeof ButtonInnerStyle>;
+export type ButtonStyleProps = VariantProps<typeof buttonStyle>;
