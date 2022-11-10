@@ -1,13 +1,13 @@
 import { Button, ButtonProps, buttonLoadingState } from '../button';
 
-import * as React from 'react';
-import { createComponent } from '../utils';
+import { cloneElement, isValidElement } from 'react';
+import { forwardRef } from '~/system';
 
-type OmittedProps = 'leftIcon' | 'rightIcon' | 'ref' | 'shape';
+type OmittedProps = 'leftIcon' | 'rightIcon' | 'shape';
 
-interface BaseButtonProps extends Omit<ButtonProps, OmittedProps> {}
+type BaseButtonProps = Omit<ButtonProps, OmittedProps>;
 
-interface IconButtonBase extends BaseButtonProps {
+type IconButtonBase = {
   /**
    * The icon to be used in the button.
    * @type React.ReactElement
@@ -21,24 +21,24 @@ interface IconButtonBase extends BaseButtonProps {
    * A11y: A label that describes the button
    */
   'aria-label': string;
-}
+};
 
-export type IconButtonProps = IconButtonBase & buttonLoadingState;
+export type IconButtonProps = IconButtonBase &
+  buttonLoadingState &
+  BaseButtonProps;
 
-export const IconButton = createComponent<IconButtonProps>(
-  ({ icon, children, rounded, 'aria-label': ariaLabel, ...rest }) => {
-    /**
-     * Passing the icon as prop or children should work
-     */
-    const childrenElement = children as unknown as SVGElement;
-    const element = icon || childrenElement;
+export const IconButton = forwardRef<'button', IconButtonProps>(
+  (props, ref) => {
+    const { icon, children, rounded, 'aria-label': ariaLabel, ...rest } = props;
 
-    const _children = React.isValidElement(element)
-      ? React.cloneElement<any>(element, {
+    const element = icon || children;
+    const _children = isValidElement(element)
+      ? cloneElement(element as any, {
           'aria-hidden': true,
           focusable: false
         })
       : null;
+
     return (
       <Button
         shape={rounded ? 'pill' : 'square'}

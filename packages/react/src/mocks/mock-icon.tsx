@@ -1,4 +1,4 @@
-export function IconCart(props: JSX.IntrinsicElements['svg']) {
+function IconCart(props: JSX.IntrinsicElements['svg']) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

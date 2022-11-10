@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { cx } from 'cva';
+import { cx } from '~/system';
 
 export interface ButtonIconProps extends React.ComponentProps<'span'> {
   children: React.ReactNode;
