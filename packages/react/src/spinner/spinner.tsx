@@ -10,7 +10,7 @@ export const Spinner = forwardRef<'svg', SpinnerProps>(function Spinner(
   props,
   ref
 ) {
-  const { label, as, className, size, ...rest } = props;
+  const { label, as, className, size, color, ...rest } = props;
   return (
     <aphro.svg
       xmlns="http://www.w3.org/2000/svg"
@@ -19,7 +19,7 @@ export const Spinner = forwardRef<'svg', SpinnerProps>(function Spinner(
       viewBox="0 0 24 24"
       aria-hidden
       as={as}
-      className={spinnerStyle({ size, class: className })}
+      className={spinnerStyle({ size, color, class: className })}
       {...rest}
     >
       <circle

@@ -3,6 +3,17 @@ import { cva } from '~/system';
 
 export const spinnerStyle = cva('animate-spin motion-reduce:hidden ', {
   variants: {
+    color: {
+      primary: 'text-primary-11',
+      info: 'text-info-11',
+      success: 'text-success-11',
+      warning: 'text-warning-11',
+      danger: 'text-danger-11',
+      neutral: 'text-neutral-11',
+      white: 'text-white',
+      black: 'text-black',
+      transparent: ''
+    },
     size: {
       xs: 'h-3 w-3',
       sm: 'h-4 w-4',
@@ -12,7 +23,8 @@ export const spinnerStyle = cva('animate-spin motion-reduce:hidden ', {
     }
   },
   defaultVariants: {
-    size: 'md'
+    size: 'md',
+    color: 'white'
   }
 });
 
