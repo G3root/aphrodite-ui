@@ -6,7 +6,7 @@ import {
   generateThemeColors,
   lightThemeTokens
 } from '../theme';
-import { button } from '../components';
+
 import { ColorTokens } from '../types';
 interface pluginArgs {
   theme?: {
@@ -22,14 +22,12 @@ export const aphroditePlugin = plugin.withOptions(
       ...darkThemeTokens,
       ...data?.theme?.dark
     };
-    return ({ addBase, addComponents, addVariant }) => {
+    return ({ addBase, addVariant }) => {
       addBase({
         ':root': root,
         '[data-theme="dark"]': dark
       });
-      addComponents({
-        ...button
-      });
+
       addVariant('not-disabled', '&:not(:disabled)');
     };
   },
