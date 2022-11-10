@@ -1,5 +1,8 @@
-import {
-  polymorphicFactory,
+import { polymorphicFactory, forwardRef } from '@polymorphic-factory/react';
+import { cva, cx } from 'cva';
+
+import type { CxOptions, CxReturn, VariantProps } from 'cva';
+import type {
   AssignCommon,
   ComponentWithAs,
   DOMElements,
@@ -7,11 +10,11 @@ import {
   HTMLPolymorphicProps,
   MergeWithAs,
   OmitCommonProps,
-  PropsOf,
-  forwardRef
+  PropsOf
 } from '@polymorphic-factory/react';
-export * from 'cva';
+
 export const aphro = polymorphicFactory();
+
 export {
   AssignCommon,
   ComponentWithAs,
@@ -21,5 +24,10 @@ export {
   MergeWithAs,
   OmitCommonProps,
   PropsOf,
-  forwardRef
+  forwardRef,
+  cva,
+  cx,
+  CxOptions,
+  CxReturn,
+  VariantProps
 };
