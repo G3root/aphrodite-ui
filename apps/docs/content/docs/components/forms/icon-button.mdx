@@ -3,7 +3,13 @@ title: Icon Button
 description: IconButton composes the Button component except that it renders only an icon.
 ---
 
+{/* this files contains some content from Chakra UI documentation. */}
+{/* MIT Licensed, Copyright(c) 2019 Segun Adebayo, see LICENSE.chakra.md for details */}
+{/* Credits to the Chakra UI team: */}
+{/* https://github.com/chakra-ui/chakra-ui-docs/blob/main/content/docs/components/icon-button/usage.mdx */}
+
 import { FiSearch } from 'react-icons/fi';
+import { MdPhone } from 'react-icons/md';
 
 # Icon Button
 
@@ -16,6 +22,10 @@ import { IconButton } from '@aphrodite-ui/react';
 ```
 
 ## Usage
+
+IconButton composes the `Button` component except that it renders only an icon.
+Since `IconButton` only renders an icon, you must pass the `aria-label` prop, so
+screen readers can give meaning to the button.
 
 <Canvas>
   <IconButton
@@ -266,4 +276,28 @@ Like the `Button` component, pass the `shape` prop to change the shape of the bu
     shape="pill"
   />
 </div>
+```
+
+### With custom icon
+
+You can also use icons from popular libraries like
+[react-icons](https://react-icons.github.io/react-icons/) and just pass it into
+the button.
+
+<Canvas>
+  <IconButton
+    variant="outline"
+    color="primary"
+    aria-label="call"
+    icon={<MdPhone className="h-5 w-5" />}
+  />
+</Canvas>
+
+```jsx
+<IconButton
+  variant="outline"
+  color="primary"
+  aria-label="call"
+  icon={<MdPhone className="h-5 w-5" />}
+/>
 ```
