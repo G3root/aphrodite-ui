@@ -1,6 +1,6 @@
 import { Canvas } from '~/components';
 import { createElement } from 'react';
-import { Center } from '@aphrodite-ui/react';
+import { Center, Spinner, Button, IconButton } from '@aphrodite-ui/react';
 
 const addDocClass = (props: any, tag: any) =>
   createElement(tag, { ...props, className: 'docs' });
@@ -22,5 +22,8 @@ export const mdxComponents = {
   detail: (props: any) => addDocClass(props, 'detail'),
   blockquote: (props: any) => addDocClass(props, 'blockquote'),
   Canvas,
-  Center
+  Center,
+  Spinner,
+  Button,
+  IconButton
 };
