@@ -1,0 +1,269 @@
+---
+title: Icon Button
+description: IconButton composes the Button component except that it renders only an icon.
+---
+
+import { FiSearch } from 'react-icons/fi';
+
+# Icon Button
+
+IconButton composes the `Button` component except that it renders only an icon
+
+## Import
+
+```js
+import { IconButton } from '@aphrodite-ui/react';
+```
+
+## Usage
+
+<Canvas>
+  <IconButton
+    aria-label="Search database"
+    icon={<FiSearch className="h-5 w-5" />}
+  />
+</Canvas>
+
+```jsx
+<IconButton
+  aria-label="Search database"
+  icon={<FiSearch className="h-5 w-5" />}
+/>
+```
+
+### Button Colors
+
+The `IconButton` component accepts most of the props from the Button component,
+so we can use `color` prop to change the color of the button.
+
+<Canvas>
+  <div className="flex items-center gap-2">
+    <IconButton
+      aria-label="Search database"
+      icon={<FiSearch className="h-5 w-5" />}
+      color="primary"
+    />
+    <IconButton
+      aria-label="Search database"
+      icon={<FiSearch className="h-5 w-5" />}
+      color="neutral"
+    />
+    <IconButton
+      aria-label="Search database"
+      icon={<FiSearch className="h-5 w-5" />}
+      color="success"
+    />
+    <IconButton
+      aria-label="Search database"
+      icon={<FiSearch className="h-5 w-5" />}
+      color="info"
+    />
+    <IconButton
+      aria-label="Search database"
+      icon={<FiSearch className="h-5 w-5" />}
+      color="warning"
+    />
+    <IconButton
+      aria-label="Search database"
+      icon={<FiSearch className="h-5 w-5" />}
+      color="danger"
+    />
+  </div>
+</Canvas>
+
+```jsx
+<div className="flex items-center gap-2">
+  <IconButton
+    aria-label="Search database"
+    icon={<FiSearch className="h-5 w-5" />}
+    color="primary"
+  />
+  <IconButton
+    aria-label="Search database"
+    icon={<FiSearch className="h-5 w-5" />}
+    color="neutral"
+  />
+  <IconButton
+    aria-label="Search database"
+    icon={<FiSearch className="h-5 w-5" />}
+    color="success"
+  />
+  <IconButton
+    aria-label="Search database"
+    icon={<FiSearch className="h-5 w-5" />}
+    color="info"
+  />
+  <IconButton
+    aria-label="Search database"
+    icon={<FiSearch className="h-5 w-5" />}
+    color="warning"
+  />
+  <IconButton
+    aria-label="Search database"
+    icon={<FiSearch className="h-5 w-5" />}
+    color="danger"
+  />
+</div>
+```
+
+### Button Sizes
+
+Like the `Button` component, pass the `size` prop to change the size of the button.
+
+<Canvas>
+  <div className="flex items-center gap-2">
+    <IconButton
+      aria-label="Search database"
+      icon={<FiSearch className="h-5 w-5" />}
+      size="xs"
+    />
+    <IconButton
+      aria-label="Search database"
+      icon={<FiSearch className="h-5 w-5" />}
+      size="sm"
+    />
+    <IconButton
+      aria-label="Search database"
+      icon={<FiSearch className="h-5 w-5" />}
+      size="md"
+    />
+    <IconButton
+      aria-label="Search database"
+      icon={<FiSearch className="h-5 w-5" />}
+      size="lg"
+    />
+    <IconButton
+      aria-label="Search database"
+      icon={<FiSearch className="h-5 w-5" />}
+      size="xl"
+    />
+  </div>
+</Canvas>
+
+```jsx
+<div className="flex items-center gap-2">
+  <IconButton
+    aria-label="Search database"
+    icon={<FiSearch className="h-5 w-5" />}
+    size="xs"
+  />
+  <IconButton
+    aria-label="Search database"
+    icon={<FiSearch className="h-5 w-5" />}
+    size="sm"
+  />
+  <IconButton
+    aria-label="Search database"
+    icon={<FiSearch className="h-5 w-5" />}
+    size="md"
+  />
+  <IconButton
+    aria-label="Search database"
+    icon={<FiSearch className="h-5 w-5" />}
+    size="lg"
+  />
+  <IconButton
+    aria-label="Search database"
+    icon={<FiSearch className="h-5 w-5" />}
+    size="xl"
+  />
+</div>
+```
+
+### Button variants
+
+Like the `Button` component, pass the `variant` prop to change the style of the button.
+
+<Canvas>
+  <div className="flex items-center gap-2">
+    <IconButton
+      aria-label="Search database"
+      icon={<FiSearch className="h-5 w-5" />}
+      variant="solid"
+    />
+    <IconButton
+      aria-label="Search database"
+      icon={<FiSearch className="h-5 w-5" />}
+      variant="flat"
+    />
+    <IconButton
+      aria-label="Search database"
+      icon={<FiSearch className="h-5 w-5" />}
+      variant="ghost"
+    />
+    <IconButton
+      aria-label="Search database"
+      icon={<FiSearch className="h-5 w-5" />}
+      variant="outline"
+    />
+    <IconButton
+      aria-label="Search database"
+      icon={<FiSearch className="h-5 w-5" />}
+      variant="link"
+    />
+  </div>
+</Canvas>
+
+```jsx
+<div className="flex items-center gap-2">
+  <IconButton
+    aria-label="Search database"
+    icon={<FiSearch className="h-5 w-5" />}
+    variant="solid"
+  />
+  <IconButton
+    aria-label="Search database"
+    icon={<FiSearch className="h-5 w-5" />}
+    variant="flat"
+  />
+  <IconButton
+    aria-label="Search database"
+    icon={<FiSearch className="h-5 w-5" />}
+    variant="ghost"
+  />
+  <IconButton
+    aria-label="Search database"
+    icon={<FiSearch className="h-5 w-5" />}
+    variant="outline"
+  />
+  <IconButton
+    aria-label="Search database"
+    icon={<FiSearch className="h-5 w-5" />}
+    variant="link"
+  />
+</div>
+```
+
+### Button Shapes
+
+Like the `Button` component, pass the `shape` prop to change the shape of the button.
+
+<Canvas>
+  <div className="flex items-center gap-2">
+    <IconButton
+      aria-label="Search database"
+      icon={<FiSearch className="h-5 w-5" />}
+      shape="square"
+    />
+    <IconButton
+      aria-label="Search database"
+      icon={<FiSearch className="h-5 w-5" />}
+      shape="pill"
+    />
+  </div>
+</Canvas>
+
+```jsx
+<div className="flex items-center gap-2">
+  <IconButton
+    aria-label="Search database"
+    icon={<FiSearch className="h-5 w-5" />}
+    shape="square"
+  />
+  <IconButton
+    aria-label="Search database"
+    icon={<FiSearch className="h-5 w-5" />}
+    shape="pill"
+  />
+</div>
+```
