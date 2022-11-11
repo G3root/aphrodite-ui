@@ -1,7 +1,8 @@
 import { Canvas } from '~/components';
 import { createElement } from 'react';
 import { Center, Spinner, Button, IconButton } from '@aphrodite-ui/react';
-
+import { FiSearch, FiMail, FiArrowRightCircle, FiChrome } from 'react-icons/fi';
+import { MdPhone } from 'react-icons/md';
 const addDocClass = (props: any, tag: any) =>
   createElement(tag, { ...props, className: 'docs' });
 
@@ -25,5 +26,10 @@ export const mdxComponents = {
   Center,
   Spinner,
   Button,
-  IconButton
+  IconButton,
+  FiSearch,
+  MdPhone,
+  FiMail,
+  FiArrowRightCircle,
+  FiChrome
 };
