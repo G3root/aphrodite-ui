@@ -2,6 +2,7 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 import { DocFrontMatter } from '~/types';
+import { AlertBanner } from '../alert-banner';
 import { DocNavbar } from '../doc-navbar';
 import { TOC } from '../toc';
 
@@ -41,6 +42,7 @@ export function PageContainer(props: PageContainerProps) {
         <title>{title}</title>
         <meta name="description" content={description} />
       </Head>
+      <AlertBanner />
       <DocNavbar />
       <div className="relative mx-auto flex max-w-8xl justify-center sm:px-2 lg:px-8 xl:px-12">
         {sidebar}
