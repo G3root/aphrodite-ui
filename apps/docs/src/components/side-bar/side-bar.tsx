@@ -47,12 +47,12 @@ function SidebarList() {
 
 export function SideBar() {
   return (
-    <div className="hidden lg:relative lg:block lg:flex-none">
+    <aside className="hidden lg:relative lg:block lg:flex-none">
       <div className="sticky top-[4.5rem] -ml-0.5 h-[calc(100vh-4.5rem)] overflow-y-auto overflow-x-hidden py-16 pl-0.5">
         <nav className="text-base lg:text-sm w-64 pr-8">
           <SidebarList />
         </nav>
       </div>
-    </div>
+    </aside>
   );
 }
