@@ -1,4 +1,4 @@
-import Head from 'next/head';
+import { NextSeo } from 'next-seo';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 import { MenuContextProvider } from '~/contexts';
@@ -41,10 +41,7 @@ export function PageContainer(props: PageContainerProps) {
   return (
     <MenuContextProvider>
       <div>
-        <Head>
-          <title>{title}</title>
-          <meta name="description" content={description} />
-        </Head>
+        <NextSeo title={title} description={description} />
         <AlertBanner />
         <DocNavbar />
         <div className="relative mx-auto flex max-w-8xl justify-center sm:px-2 lg:px-8 xl:px-12">
