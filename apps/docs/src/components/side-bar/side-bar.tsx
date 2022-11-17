@@ -18,7 +18,7 @@ function SubItems(props: SubItemsProps) {
   );
 }
 
-function SidebarList() {
+export function SidebarList() {
   const { asPath } = useRouter();
   const route = asPath.split('#')[0];
   return (
