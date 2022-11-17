@@ -7,10 +7,8 @@ import rehypeSlug from 'rehype-slug';
 import rehypePrettyCode from 'rehype-pretty-code';
 import remarkGfm from 'remark-gfm';
 import theme from './theme.json';
-
 import { siteConfig } from './src/configs';
-
-import { getTableOfContents } from './src/utils';
+import { getTableOfContents, rehypeDocsClass } from './src/utils';
 
 const rehypePrettyCodeOptions = {
   theme,
@@ -69,7 +67,11 @@ const contentLayerConfig = makeSource({
   documentTypes: [Doc],
   mdx: {
     remarkPlugins: [remarkGfm],
-    rehypePlugins: [rehypeSlug, [rehypePrettyCode, rehypePrettyCodeOptions]]
+    rehypePlugins: [
+      rehypeSlug,
+      [rehypePrettyCode, rehypePrettyCodeOptions],
+      rehypeDocsClass
+    ]
   }
 });
 
