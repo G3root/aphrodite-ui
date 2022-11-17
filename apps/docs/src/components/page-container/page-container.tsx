@@ -1,9 +1,11 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
+import { MenuContextProvider } from '~/contexts';
 import { DocFrontMatter } from '~/types';
 import { AlertBanner } from '../alert-banner';
 import { DocNavbar } from '../doc-navbar';
+import { Footer } from '../footer';
 import { TOC } from '../toc';
 
 export interface PageContainerProps {
@@ -37,39 +39,29 @@ export function PageContainer(props: PageContainerProps) {
   const { title, description, editUrl, headings = [] } = frontMatter;
 
   return (
-    <div>
-      <Head>
-        <title>{title}</title>
-        <meta name="description" content={description} />
-      </Head>
-      <AlertBanner />
-      <DocNavbar />
-      <div className="relative mx-auto flex max-w-8xl justify-center sm:px-2 lg:px-8 xl:px-12">
-        {sidebar}
+    <MenuContextProvider>
+      <div>
+        <Head>
+          <title>{title}</title>
+          <meta name="description" content={description} />
+        </Head>
+        <AlertBanner />
+        <DocNavbar />
+        <div className="relative mx-auto flex max-w-8xl justify-center sm:px-2 lg:px-8 xl:px-12">
+          {sidebar}
 
-        <div className="min-w-0 max-w-2xl flex-auto px-4 py-16 lg:max-w-none lg:pr-0 lg:pl-8 xl:px-16">
-          <article>
-            {children}
-            {pagination}
-          </article>
+          <div className="min-w-0 max-w-2xl flex-auto px-4 py-16 lg:max-w-none lg:pr-0 lg:pl-8 xl:px-16">
+            <article>
+              {children}
+              {pagination}
+            </article>
 
-          <footer className="flex items-center justify-center">
-            <p>
-              Proudly made in 🇱🇰 by{' '}
-              <a
-                className="underline"
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://nafeez.xyz/"
-              >
-                Nafees Nazik.
-              </a>
-            </p>
-          </footer>
+            <Footer />
+          </div>
+
+          <TOC editUrl={editUrl} headings={headings} />
         </div>
-
-        <TOC editUrl={editUrl} headings={headings} />
       </div>
-    </div>
+    </MenuContextProvider>
   );
 }
