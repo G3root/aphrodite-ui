@@ -34,6 +34,7 @@ importers:
     specifiers:
       '@aphrodite-ui/core': workspace:*
       '@aphrodite-ui/react': workspace:*
+      '@headlessui/react': ^1.7.4
       '@preact/signals-react': ^1.2.1
       '@types/node': 18.11.9
       '@types/react': ^18.0.17
@@ -59,6 +60,7 @@ importers:
     dependencies:
       '@aphrodite-ui/core': link:../../packages/core
       '@aphrodite-ui/react': link:../../packages/react
+      '@headlessui/react': 1.7.4_biqbaboplfbrettd7655fr4n2y
       '@types/node': 18.11.9
       '@types/react': 18.0.17
       '@types/react-dom': 18.0.6
@@ -2003,6 +2005,18 @@ packages:
       protobufjs: 7.1.2
       yargs: 16.2.0
     dev: true
+
+  /@headlessui/react/1.7.4_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-D8n5yGCF3WIkPsjEYeM8knn9jQ70bigGGb5aUvN6y4BGxcT3OcOQOKcM3zRGllRCZCFxCZyQvYJF6ZE7bQUOyQ==}
+    engines: {node: '>=10'}
+    peerDependencies:
+      react: ^16 || ^17 || ^18
+      react-dom: ^16 || ^17 || ^18
+    dependencies:
+      client-only: 0.0.1
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+    dev: false
 
   /@humanwhocodes/config-array/0.10.4:
     resolution: {integrity: sha512-mXAIHxZT3Vcpg83opl1wGlVZ9xydbfZO3r5YfRSH6Gpp2J/PfdBP0wbDa2sO6/qRbcalpoevVyW6A/fI6LfeMw==}
