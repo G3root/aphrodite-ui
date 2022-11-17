@@ -58,7 +58,7 @@ export function DocNavbar() {
           <MenuButton />
         </div>
         <div className="relative flex flex-grow basis-0 items-center">
-          <Link aria-label="Home page" href="/">
+          <Link aria-label="Home page" href="/docs">
             <span className="font-semibold  text-xl">Aphrodite UI</span>
           </Link>
         </div>
