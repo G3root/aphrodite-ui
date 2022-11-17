@@ -2,6 +2,8 @@ import { IconButton } from '@aphrodite-ui/react';
 import { useTheme } from 'next-themes';
 import Link from 'next/link';
 import { FiSun, FiMoon, FiMenu } from 'react-icons/fi';
+import { MobileDrawer } from './mobile-drawer';
+import { useMenuState } from '~/contexts';
 
 function ThemeSwitcher() {
   const { theme, setTheme } = useTheme();
@@ -34,27 +36,38 @@ function ThemeSwitcher() {
   );
 }
 
+function MenuButton() {
+  const { handleOpen } = useMenuState();
+  return (
+    <IconButton
+      variant="ghost"
+      color="neutral"
+      aria-label="Open navigation"
+      size="sm"
+      icon={<FiMenu className="h-5 w-5" strokeWidth={2} />}
+      onClick={handleOpen}
+    />
+  );
+}
+
 export function DocNavbar() {
   return (
-    <header className="sticky nav top-0 z-50 flex flex-wrap items-center justify-between dark:bg-neutral-2 bg-white px-4 py-5 motion-safe:transition duration-500  sm:px-6 lg:px-8 ">
-      <div className="mr-6 flex lg:hidden">
-        <IconButton
-          variant="ghost"
-          color="neutral"
-          aria-label="Open navigation"
-          size="sm"
-          icon={<FiMenu className="h-5 w-5" strokeWidth={2} />}
-        />
-      </div>
-      <div className="relative flex flex-grow basis-0 items-center">
-        <Link aria-label="Home page" href="/">
-          <span className="font-semibold  text-xl">Aphrodite UI</span>
-        </Link>
-      </div>
+    <>
+      <nav className="sticky nav top-0 z-50 flex flex-wrap items-center justify-between dark:bg-neutral-2 bg-white px-4 py-5 motion-safe:transition duration-500  sm:px-6 lg:px-8 ">
+        <div className="mr-6 flex lg:hidden">
+          <MenuButton />
+        </div>
+        <div className="relative flex flex-grow basis-0 items-center">
+          <Link aria-label="Home page" href="/">
+            <span className="font-semibold  text-xl">Aphrodite UI</span>
+          </Link>
+        </div>
 
-      <div>
-        <ThemeSwitcher />
-      </div>
-    </header>
+        <div>
+          <ThemeSwitcher />
+        </div>
+      </nav>
+      <MobileDrawer />
+    </>
   );
 }
