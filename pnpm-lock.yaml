@@ -57,6 +57,8 @@ importers:
       shiki: 0.10.1
       tailwindcss: ^3.2.0
       typescript: 4.8.4
+      unified: ^10.1.2
+      unist-util-visit: ^4.1.1
     dependencies:
       '@aphrodite-ui/core': link:../../packages/core
       '@aphrodite-ui/react': link:../../packages/react
@@ -84,6 +86,8 @@ importers:
       rehype-slug: 5.1.0
       remark-gfm: 3.0.1
       tailwindcss: 3.2.0_postcss@8.4.18
+      unified: 10.1.2
+      unist-util-visit: 4.1.1
 
   apps/storybook-react:
     specifiers:
