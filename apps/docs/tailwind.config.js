@@ -1,5 +1,5 @@
 const { aphroditePlugin } = require('@aphrodite-ui/core');
-
+const { fontFamily } = require('tailwindcss/defaultTheme');
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -9,7 +9,11 @@ module.exports = {
   ],
   darkMode: ['class', '[data-theme="dark"]'],
   theme: {
-    extend: {}
+    extend: {
+      fontFamily: {
+        sans: ['Inter', ...fontFamily.sans]
+      }
+    }
   },
   plugins: [aphroditePlugin()]
 };
