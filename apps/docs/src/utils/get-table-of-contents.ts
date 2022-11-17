@@ -1,8 +1,6 @@
 // credits: https://github.com/chakra-ui/chakra-ui-docs/blob/main/src/utils/get-table-of-contents.ts
 
-import GithubSlugger from 'github-slugger';
-
-const slugger = new GithubSlugger();
+import { slug } from 'github-slugger';
 
 export function getTableOfContents(mdxContent: string) {
   const regexp = new RegExp(/^(### |## )(.*)\n/, 'gm');
@@ -14,7 +12,8 @@ export function getTableOfContents(mdxContent: string) {
     tableOfContents = headings.map((heading) => {
       const headingText = heading[2].trim();
       const headingType = heading[1].trim() === '##' ? 'h2' : 'h3';
-      const headingLink = slugger.slug(headingText, false);
+      const headingLink = slug(headingText, false);
+
       return {
         text: headingText,
         id: headingLink,
