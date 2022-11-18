@@ -156,7 +156,7 @@ importers:
   packages/react:
     specifiers:
       '@ladle/react': ^2.4.5
-      '@polymorphic-factory/react': ^0.1.2
+      '@polymorphic-factory/react': ^0.2.0
       '@testing-library/dom': ^8.19.0
       '@testing-library/jest-dom': ^5.16.5
       '@testing-library/react': ^13.4.0
@@ -166,7 +166,6 @@ importers:
       '@types/testing-library__jest-dom': ^5.14.5
       '@vitejs/plugin-react': ^2.0.1
       '@vitest/coverage-c8': ^0.24.5
-      ariakit: 2.0.0-next.41
       autoprefixer: ^10.4.12
       cva: npm:class-variance-authority@^0.2.4
       jsdom: ^20.0.2
@@ -178,8 +177,7 @@ importers:
       vite: ^3.0.7
       vitest: ^0.24.5
     dependencies:
-      '@polymorphic-factory/react': 0.1.2_react@18.2.0
-      ariakit: 2.0.0-next.41_biqbaboplfbrettd7655fr4n2y
+      '@polymorphic-factory/react': 0.2.0_react@18.2.0
       cva: /class-variance-authority/0.2.4
     devDependencies:
       '@ladle/react': 2.4.5_biqbaboplfbrettd7655fr4n2y
@@ -1972,16 +1970,6 @@ packages:
     resolution: {integrity: sha512-cEee/Z+I12mZcFJshKcCqC8tuX5hG3s+d+9nZ3LabqKF1vKdF41B92pJVCBggjAGORAeOzyyDDKrZwIkLffeOQ==}
     dev: true
 
-  /@floating-ui/core/1.0.1:
-    resolution: {integrity: sha512-bO37brCPfteXQfFY0DyNDGB3+IMe4j150KFQcgJ5aBP295p9nBGeHEs/p0czrRbtlHq4Px/yoPXO/+dOCcF4uA==}
-    dev: false
-
-  /@floating-ui/dom/1.0.3:
-    resolution: {integrity: sha512-6H1kwjkOZKabApNtXRiYHvMmYJToJ1DV7rQ3xc/WJpOABhQIOJJOdz2AOejj8X+gcybaFmBpisVTZxBZAM3V0w==}
-    dependencies:
-      '@floating-ui/core': 1.0.1
-    dev: false
-
   /@grpc/grpc-js/1.7.3:
     resolution: {integrity: sha512-H9l79u4kJ2PVSxUNA08HMYAnUBLj9v6KjYQ7SQ71hOZcEXhShE/y5iQCesP8+6/Ik/7i2O0a10bPquIcYfufog==}
     engines: {node: ^8.13.0 || >=10.10.0}
@@ -2534,8 +2522,8 @@ packages:
     engines: {node: '>=14'}
     dev: true
 
-  /@polymorphic-factory/react/0.1.2_react@18.2.0:
-    resolution: {integrity: sha512-K4lPBudgY8gaHxKQ01+cEun/5qdlxlHZAJ0v/TorZQEWMPvPcAeoq+l9EUb4nfWbGrvCSSbhlNyesgttMPpvaw==}
+  /@polymorphic-factory/react/0.2.0_react@18.2.0:
+    resolution: {integrity: sha512-5mQMWfZBdtX6wY3vSS6rLY3ZSrnrlH8fhYalSacD51Z8rClvqjN4MLVnJnP0fpbpfGIb28K0tXhOO/ezNU3wJQ==}
     peerDependencies:
       react: '>=16.8 || >=17 || >18'
     dependencies:
@@ -3149,26 +3137,6 @@ packages:
     dependencies:
       deep-equal: 2.0.5
     dev: true
-
-  /ariakit-utils/0.17.0-next.26_react@18.2.0:
-    resolution: {integrity: sha512-Su1MA0nWcMKI/lPS++jgkXek6Z+Az4SGOTIjGz2mn7kN6pSRO3Xm4gW/6gLpbu0kmVd+MYNSpmEvFnJUf/udhA==}
-    peerDependencies:
-      react: ^17.0.0 || ^18.0.0
-    dependencies:
-      react: 18.2.0
-    dev: false
-
-  /ariakit/2.0.0-next.41_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-79ACgnIofsC7ULirjz/dqjNCwUW9TmX7ULdCqHHrpJP1H+lw9vtpWv4eeuRAII2lsyfNtXmLnY6qZ1ZV3ucxmA==}
-    peerDependencies:
-      react: ^17.0.0 || ^18.0.0
-      react-dom: ^17.0.0 || ^18.0.0
-    dependencies:
-      '@floating-ui/dom': 1.0.3
-      ariakit-utils: 0.17.0-next.26_react@18.2.0
-      react: 18.2.0
-      react-dom: 18.2.0_react@18.2.0
-    dev: false
 
   /array-flatten/1.1.1:
     resolution: {integrity: sha512-PCVAQswWemu6UdxsDFFX/+gVeYqKAod3D3UVm91jHwynguOwAvYPhx8nNlM++NqRcK6CxxpUafjmhIdKiHibqg==}
