@@ -1,5 +1,11 @@
 # @aphrodite-ui/react
 
+## 0.1.2
+
+### Patch Changes
+
+- use (polymorphic react)[https://github.com/chakra-ui/polymorphic] for components, by [@G3root](https://github.com/G3root) (See [`dab7575`](https://github.com/G3root/aphrodite-ui/commit/dab75759c5b2b92780754b35cb6a59c4b8d6d1c3))
+
 ## 0.1.1
 
 ### Patch Changes
