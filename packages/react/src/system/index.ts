@@ -3,26 +3,20 @@ import { cva, cx } from 'cva';
 
 import type { CxOptions, CxReturn, VariantProps } from 'cva';
 import type {
-  AssignCommon,
   ComponentWithAs,
-  DOMElements,
   HTMLPolymorphicComponents,
   HTMLPolymorphicProps,
-  MergeWithAs,
-  OmitCommonProps,
-  PropsOf
+  PropsOf,
+  Assign
 } from '@polymorphic-factory/react';
 
 export const aphro = polymorphicFactory();
 
 export {
-  AssignCommon,
+  Assign,
   ComponentWithAs,
-  DOMElements,
   HTMLPolymorphicComponents,
   HTMLPolymorphicProps,
-  MergeWithAs,
-  OmitCommonProps,
   PropsOf,
   forwardRef,
   cva,
