@@ -15,7 +15,8 @@
     "coverage": "turbo run coverage",
     "format": "prettier --write \"**/*.{ts,tsx,js,jsx,md}\"",
     "changeset": "changeset",
-    "version-packages": "changeset version"
+    "version-packages": "changeset version",
+    "publish": "changeset publish"
   },
   "engines": {
     "node": ">=16.0.0",
