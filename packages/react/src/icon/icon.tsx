@@ -1,4 +1,6 @@
-import { cx, forwardRef, aphro, HTMLPolymorphicProps } from '~/system';
+import { cx } from '~/system';
+
+import { forwardRef, ComponentProps } from 'react';
 const fallbackIcon = {
   path: (
     <g stroke="currentColor" strokeWidth="1.5">
@@ -18,13 +20,15 @@ const fallbackIcon = {
   viewBox: '0 0 24 24'
 };
 
-export type IconProps = HTMLPolymorphicProps<'svg'> & {
+export type IconProps = ComponentProps<'svg'> & {
   icon?: React.ElementType;
 };
 
-export const Icon = forwardRef<'svg', IconProps>(function Icon(props) {
+export const Icon = forwardRef<SVGSVGElement, IconProps>(function Icon(
+  props,
+  ref
+) {
   const {
-    as,
     children,
     viewBox,
     focusable,
@@ -48,8 +52,8 @@ export const Icon = forwardRef<'svg', IconProps>(function Icon(props) {
   const _path = (children ?? fallbackIcon.path) as React.ReactNode;
 
   return (
-    <aphro.svg as={as} viewBox={_viewBox} {...shared} {...rest}>
+    <svg viewBox={_viewBox} {...shared} {...rest} ref={ref}>
       {_path}
-    </aphro.svg>
+    </svg>
   );
 });

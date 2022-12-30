@@ -1,7 +1,7 @@
+import { ComponentProps, forwardRef } from 'react';
 import { Spinner } from '../spinner';
 import { ButtonIcon } from './button-icon';
 import { ButtonStyleProps, buttonStyle } from './button.style';
-import { forwardRef, aphro, HTMLPolymorphicProps } from '~/system';
 
 export type buttonLoadingState =
   | {
@@ -47,7 +47,7 @@ export type buttonLoadingState =
       spinner?: never;
     };
 
-export type ButtonProps = HTMLPolymorphicProps<'button'> &
+export type ButtonProps = ComponentProps<'button'> &
   ButtonStyleProps & {
     /**
      * If added, the button will show an icon after the button's label.
@@ -61,86 +61,83 @@ export type ButtonProps = HTMLPolymorphicProps<'button'> &
     leftIcon?: React.ReactElement;
   } & buttonLoadingState;
 
-export const Button = forwardRef<'button', ButtonProps>(function Button(
-  props,
-  ref
-) {
-  const {
-    leftIcon,
-    rightIcon,
-    disabled,
-    loading,
-    loadingText,
-    children,
-    type,
-    variant,
-    spinner,
-    spinnerPlacement,
-    color,
-    size,
-    shape,
-    iconButton,
-    className,
-    as,
-    ...rest
-  } = props;
+export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
+  function Button(props, ref) {
+    const {
+      leftIcon,
+      rightIcon,
+      disabled,
+      loading,
+      loadingText,
+      children,
+      type,
+      variant,
+      spinner,
+      spinnerPlacement,
+      color,
+      size,
+      shape,
+      iconButton,
+      className,
+      ...rest
+    } = props;
 
-  const isLoading = loading === true;
+    const isLoading = loading === true;
 
-  return (
-    <aphro.button
-      ref={ref}
-      as={as}
-      className={buttonStyle({
-        color,
-        size,
-        variant,
-        shape,
-        iconButton,
-        class: className
-      })}
-      disabled={loading || disabled}
-      {...rest}
-    >
-      {leftIcon ? <ButtonIcon className="mr-2">{leftIcon}</ButtonIcon> : null}
-      {isLoading && loadingText ? (
-        <>
-          {spinnerPlacement === 'end' ? (
-            <>
-              {loadingText}
-              <span className="ml-2">
-                {spinner ? <>{spinner} </> : <Spinner color="transparent" />}
-              </span>
-            </>
-          ) : (
-            <>
-              <span className="mr-2">
-                {spinner ? <>{spinner} </> : <Spinner color="transparent" />}
-              </span>
-              {loadingText}
-            </>
-          )}
-        </>
-      ) : isLoading ? (
-        <>
-          {spinner ? (
-            <>
-              {spinner} <span className="sr-only">Loading...</span>
-            </>
-          ) : (
-            <>
-              <Spinner color="transparent" />
-              <span className="sr-only">Loading...</span>
-            </>
-          )}
-        </>
-      ) : (
-        <>{children}</>
-      )}
+    return (
+      <button
+        ref={ref}
+        className={buttonStyle({
+          color,
+          size,
+          variant,
+          shape,
+          iconButton,
+          class: className
+        })}
+        disabled={loading || disabled}
+        {...rest}
+      >
+        {leftIcon ? <ButtonIcon className="mr-2">{leftIcon}</ButtonIcon> : null}
+        {isLoading && loadingText ? (
+          <>
+            {spinnerPlacement === 'end' ? (
+              <>
+                {loadingText}
+                <span className="ml-2">
+                  {spinner ? <>{spinner} </> : <Spinner color="transparent" />}
+                </span>
+              </>
+            ) : (
+              <>
+                <span className="mr-2">
+                  {spinner ? <>{spinner} </> : <Spinner color="transparent" />}
+                </span>
+                {loadingText}
+              </>
+            )}
+          </>
+        ) : isLoading ? (
+          <>
+            {spinner ? (
+              <>
+                {spinner} <span className="sr-only">Loading...</span>
+              </>
+            ) : (
+              <>
+                <Spinner color="transparent" />
+                <span className="sr-only">Loading...</span>
+              </>
+            )}
+          </>
+        ) : (
+          <>{children}</>
+        )}
 
-      {rightIcon ? (
-        <ButtonIcon className="ml-2 ">{rightIcon}</ButtonIcon>
-      ) : null}
-    </aphro.button>
-  );
-});
+        {rightIcon ? (
+          <ButtonIcon className="ml-2 ">{rightIcon}</ButtonIcon>
+        ) : null}
+      </button>
+    );
+  }
+);

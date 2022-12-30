@@ -1,7 +1,6 @@
 import { Button, ButtonProps, buttonLoadingState } from '../button';
 
-import { cloneElement, isValidElement } from 'react';
-import { forwardRef } from '~/system';
+import { cloneElement, forwardRef, isValidElement } from 'react';
 
 type OmittedProps = 'leftIcon' | 'rightIcon' | 'shape';
 
@@ -27,7 +26,7 @@ export type IconButtonProps = IconButtonBase &
   buttonLoadingState &
   BaseButtonProps;
 
-export const IconButton = forwardRef<'button', IconButtonProps>(
+export const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(
   (props, ref) => {
     const { icon, children, rounded, 'aria-label': ariaLabel, ...rest } = props;
 
@@ -45,6 +44,7 @@ export const IconButton = forwardRef<'button', IconButtonProps>(
         aria-label={ariaLabel}
         iconButton
         {...rest}
+        ref={ref}
       >
         {_children}
       </Button>

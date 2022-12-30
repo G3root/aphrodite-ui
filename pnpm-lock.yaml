@@ -156,7 +156,6 @@ importers:
   packages/react:
     specifiers:
       '@ladle/react': ^2.4.5
-      '@polymorphic-factory/react': ^0.2.0
       '@testing-library/dom': ^8.19.0
       '@testing-library/jest-dom': ^5.16.5
       '@testing-library/react': ^13.4.0
@@ -167,7 +166,7 @@ importers:
       '@vitejs/plugin-react': ^2.0.1
       '@vitest/coverage-c8': ^0.24.5
       autoprefixer: ^10.4.12
-      cva: npm:class-variance-authority@^0.2.4
+      cva: npm:class-variance-authority@^0.4.0
       jsdom: ^20.0.2
       postcss: ^8.4.18
       react: ^18.2.0
@@ -177,8 +176,7 @@ importers:
       vite: ^3.0.7
       vitest: ^0.24.5
     dependencies:
-      '@polymorphic-factory/react': 0.2.0_react@18.2.0
-      cva: /class-variance-authority/0.2.4
+      cva: /class-variance-authority/0.4.0
     devDependencies:
       '@ladle/react': 2.4.5_biqbaboplfbrettd7655fr4n2y
       '@testing-library/dom': 8.19.0
@@ -2522,14 +2520,6 @@ packages:
     engines: {node: '>=14'}
     dev: true
 
-  /@polymorphic-factory/react/0.2.0_react@18.2.0:
-    resolution: {integrity: sha512-5mQMWfZBdtX6wY3vSS6rLY3ZSrnrlH8fhYalSacD51Z8rClvqjN4MLVnJnP0fpbpfGIb28K0tXhOO/ezNU3wJQ==}
-    peerDependencies:
-      react: '>=16.8 || >=17 || >18'
-    dependencies:
-      react: 18.2.0
-    dev: false
-
   /@preact/signals-core/1.2.2:
     resolution: {integrity: sha512-z3/bCj7rRA21RJb4FeJ4guCrD1CQbaURHkCTunUWQpxUMAFOPXCD8tSFqERyGrrcSb4T3Hrmdc1OAl0LXBHwiw==}
     dev: true
@@ -3535,8 +3525,8 @@ packages:
     resolution: {integrity: sha512-xmDt/QIAdeZ9+nfdPsaBCpMvHNLFiLdjj59qjqn+6iPe6YmHGQ35sBnQ8uslRBXFmXkiZQOJRjvQeoGppoTjjg==}
     dev: true
 
-  /class-variance-authority/0.2.4:
-    resolution: {integrity: sha512-JJKn9ESARiNEBBRdTSPB9/SwaPb+wi19DMX/r8BVSyp1dxHa3JyUxa2GQjEVag5rBi+O3pL64UZ0XhnQsMz+3w==}
+  /class-variance-authority/0.4.0:
+    resolution: {integrity: sha512-74enNN8O9ZNieycac/y8FxqgyzZhZbxmCitAtAeUrLPlxjSd5zA7LfpprmxEcOmQBnaGs5hYhiSGnJ0mqrtBLQ==}
     peerDependencies:
       typescript: '>= 4.5.5 < 5'
     peerDependenciesMeta:
