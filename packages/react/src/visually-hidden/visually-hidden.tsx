@@ -1,14 +1,18 @@
-import { cx, aphro, forwardRef, HTMLPolymorphicProps } from '~/system';
+import { ComponentProps, forwardRef } from 'react';
+import { cva } from '~/system';
 
-export interface VisuallyHiddenProps extends HTMLPolymorphicProps<'span'> {}
+export const visuallyHiddenButtonStyle = cva('sr-only');
 
-export const VisuallyHidden = forwardRef<'span', VisuallyHiddenProps>(
+export interface VisuallyHiddenProps extends ComponentProps<'span'> {}
+
+export const VisuallyHidden = forwardRef<HTMLSpanElement, VisuallyHiddenProps>(
   function VisuallyHidden(props, ref) {
-    const { as, children, className } = props;
+    const { children, className } = props;
+
     return (
-      <aphro.span ref={ref} as={as} className={cx('sr-only', className)}>
+      <span ref={ref} className={visuallyHiddenButtonStyle({ className })}>
         {children}
-      </aphro.span>
+      </span>
     );
   }
 );
