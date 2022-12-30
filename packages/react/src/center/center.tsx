@@ -1,20 +1,18 @@
-import { cx, aphro, forwardRef, HTMLPolymorphicProps } from '~/system';
+import { ComponentProps, forwardRef } from 'react';
+import { cva } from '~/system';
 
-export interface CenterProps extends HTMLPolymorphicProps<'div'> {}
+export interface CenterProps extends ComponentProps<'div'> {}
 
-export const Center = forwardRef<'div', CenterProps>(function Center(
+export const centerStyle = cva('flex items-center justify-center');
+
+export const Center = forwardRef<HTMLDivElement, CenterProps>(function Center(
   props,
   ref
 ) {
-  const { children, as, className, ...rest } = props;
+  const { children, className, ...rest } = props;
   return (
-    <aphro.div
-      as={as}
-      ref={ref}
-      className={cx('flex items-center justify-center', className)}
-      {...rest}
-    >
+    <div ref={ref} className={centerStyle({ className })} {...rest}>
       {children}
-    </aphro.div>
+    </div>
   );
 });
