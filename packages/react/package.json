@@ -60,7 +60,6 @@
     "react-dom": ">= 16.8.0"
   },
   "dependencies": {
-    "@polymorphic-factory/react": "^0.2.0",
     "cva": "npm:class-variance-authority@^0.4.0"
   }
 }
