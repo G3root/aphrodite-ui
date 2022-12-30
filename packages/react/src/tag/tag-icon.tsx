@@ -1,22 +1,22 @@
 import { Icon, IconProps } from '../icon';
-import { forwardRef, cx } from '~/system';
+import { cx } from '~/system';
+import { forwardRef } from 'react';
 
 export type TagIconLeftProps = IconProps;
-export const TagIconLeft = forwardRef<'svg', IconProps>(function TagIconLeft(
-  props,
-  ref
-) {
-  const { as, className, ...rest } = props;
-  const _className = cx(className, 'inline-block h-4 w-4 mr-2');
-  return <Icon ref={ref} className={_className} {...rest} />;
-});
+export const TagIconLeft = forwardRef<SVGSVGElement, IconProps>(
+  function TagIconLeft(props, ref) {
+    const { className, ...rest } = props;
+    const _className = cx(className, 'inline-block h-4 w-4 mr-2');
+    return <Icon className={_className} {...rest} ref={ref} />;
+  }
+);
 
 export type TagIconRightProps = IconProps;
 
-export const TagIconRight = forwardRef<'svg', TagIconRightProps>(
+export const TagIconRight = forwardRef<SVGSVGElement, TagIconRightProps>(
   function TagIconRight(props, ref) {
-    const { as, className, ...rest } = props;
+    const { className, ...rest } = props;
     const _className = cx(className, 'inline-block h-4 w-4 ml-2');
-    return <Icon ref={ref} className={_className} {...rest} />;
+    return <Icon className={_className} {...rest} ref={ref} />;
   }
 );
