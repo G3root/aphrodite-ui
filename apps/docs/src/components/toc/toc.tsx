@@ -1,6 +1,6 @@
 import { DocFrontMatter } from '~/types';
 import * as React from 'react';
-import { Button, cx } from '@aphrodite-ui/react';
+import { buttonStyle, cx } from '@aphrodite-ui/react';
 
 export function useScrollSpy(
   selectors: string[],
@@ -102,17 +102,18 @@ export function TOC(props: TOCProps) {
 
       <div className="mt-8 mb-4 border border-neutral-6" />
 
-      <Button
-        as={'a'}
+      <a
         href={editUrl}
         target="_blank"
         rel="noreferrer"
-        color="neutral"
-        className="px-0"
-        variant="link"
+        className={buttonStyle({
+          className: 'px-0',
+          variant: 'link',
+          color: 'neutral'
+        })}
       >
         Edit this page on GitHub
-      </Button>
+      </a>
     </div>
   );
 }
