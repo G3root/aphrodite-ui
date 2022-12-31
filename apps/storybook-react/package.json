@@ -9,7 +9,6 @@
   "dependencies": {
     "@aphrodite-ui/core": "workspace:*",
     "@aphrodite-ui/react": "workspace:*",
-    "@ladle/react": "^2.4.5",
     "autoprefixer": "^10.4.12",
     "postcss": "^8.4.18",
     "react": "^18.2.0",
