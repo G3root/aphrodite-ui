@@ -1,11 +1,15 @@
 import { Center } from '@aphrodite-ui/react';
+import { Meta } from '@storybook/react';
 
-export default {
-  title: 'Components/Layout/Center'
+const meta: Meta<typeof Center> = {
+  title: 'Components/Layout/Center',
+  component: Center,
+  args: {
+    children: 'Centered Box',
+    className: 'bg-red-600 h-52 w-full'
+  }
 };
 
-export const basic = () => (
-  <Center className="bg-red-600 h-full w-full">
-    <div>Box</div>
-  </Center>
-);
+export default meta;
+
+export const Template = {};
