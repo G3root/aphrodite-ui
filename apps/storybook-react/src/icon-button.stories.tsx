@@ -1,15 +1,26 @@
-import { IconButton, IconButtonProps } from '@aphrodite-ui/react';
-
+import { IconButton } from '@aphrodite-ui/react';
+import type { Meta } from '@storybook/react';
 import Icon from './MockIcon';
-import type { Story } from '@ladle/react';
+import ButtonMeta from './button.stories';
 
-export default {
-  title: 'Components/Forms/Icon Button'
+const meta: Meta<typeof IconButton> = {
+  title: 'Components/Forms/Icon Button',
+  component: IconButton,
+  args: {
+    'aria-label': 'icon button',
+    icon: <Icon className="h-4 w-4" />
+  },
+  argTypes: {
+    ...ButtonMeta.argTypes,
+    'aria-label': {
+      control: { type: 'text' }
+    }
+  }
 };
 
-export const Template: Story<IconButtonProps> = (args) => (
-  <IconButton {...args} />
-);
+export default meta;
+
+export const Template = {};
 
 export const Colors = () => (
   <div className="flex items-center gap-2 flex-wrap">
@@ -295,47 +306,3 @@ export const Variants = () => (
     </div>
   </div>
 );
-
-Template.args = {
-  'aria-label': 'Button',
-  icon: <Icon style={{ height: '1em', width: '1em' }} />
-};
-
-Template.argTypes = {
-  variant: {
-    control: { type: 'select' },
-    options: ['solid', 'flat', 'ghost', 'outline', 'link']
-  },
-  color: {
-    control: { type: 'select' },
-    options: ['primary', 'neutral', 'success', 'info', 'warning', 'danger']
-  },
-  size: {
-    control: { type: 'select' },
-    options: ['xs', 'sm', 'md', 'lg', 'xl']
-  },
-  spinnerPlacement: {
-    control: { type: 'radio' },
-    options: ['start', 'end']
-  }
-
-  // loading: {
-  //   control: { type: 'boolean' }
-  // },
-
-  // disabled: {
-  //   control: { type: 'boolean' }
-  // },
-  // loadingText: {
-  //   control: 'text'
-  // },
-  // rounded: {
-  //   control: { type: 'boolean' }
-  // },
-  // icon: {
-  //   control: { type: 'object' }
-  // },
-  // 'aria-label': {
-  //   control: 'text'
-  // }
-};

@@ -1,53 +1,49 @@
-import { Button, ButtonProps } from '@aphrodite-ui/react';
-import type { Story } from '@ladle/react';
+import { Button } from '@aphrodite-ui/react';
+import type { Meta } from '@storybook/react';
 import Icon from './MockIcon';
 
-export default {
-  title: 'Components/Forms/Button'
-};
-
-export const Template: Story<ButtonProps> = ({ children, ref, ...args }) => (
-  // @ts-ignore
-  <Button {...args}>{children} </Button>
-);
-
-Template.args = {
-  children: 'Button'
-};
-Template.argTypes = {
-  variant: {
-    control: { type: 'select' },
-    options: ['solid', 'flat', 'ghost', 'outline', 'link']
+const meta: Meta<typeof Button> = {
+  title: 'Components/Forms/Button',
+  component: Button,
+  args: {
+    children: 'Button'
   },
-  color: {
-    control: { type: 'select' },
-    options: ['primary', 'neutral', 'success', 'info', 'warning', 'danger']
-  },
-  size: {
-    control: { type: 'select' },
-    options: ['xs', 'sm', 'md', 'lg', 'xl']
-  },
-  spinnerPlacement: {
-    control: { type: 'radio' },
-    options: ['start', 'end']
-  },
-  shape: {
-    control: { type: 'select' },
-    options: ['square', 'pill']
+  argTypes: {
+    variant: {
+      control: { type: 'select' },
+      options: ['solid', 'flat', 'ghost', 'outline', 'link']
+    },
+    color: {
+      control: { type: 'select' },
+      options: ['primary', 'neutral', 'success', 'info', 'warning', 'danger']
+    },
+    size: {
+      control: { type: 'select' },
+      options: ['xs', 'sm', 'md', 'lg', 'xl']
+    },
+    spinnerPlacement: {
+      control: { type: 'radio' },
+      options: ['start', 'end']
+    },
+    shape: {
+      control: { type: 'select' },
+      options: ['square', 'pill']
+    },
+    loading: {
+      control: { type: 'boolean' }
+    },
+    disabled: {
+      control: { type: 'boolean' }
+    },
+    loadingText: {
+      control: { type: 'text' }
+    }
   }
-  // loading: {
-  //   control: { type: 'boolean' }
-  // },
-  // disabled: {
-  //   control: { type: 'boolean' }
-  // },
-  // loadingText: {
-  //   control: { type: 'text' }
-  // },
-  // children: {
-  //   control: { type: 'text' }
-  // }
 };
+
+export default meta;
+
+export const Template = {};
 
 export const Colors = () => (
   <div className="flex items-center gap-2 flex-wrap">

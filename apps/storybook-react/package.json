@@ -2,22 +2,35 @@
   "name": "storybook-react",
   "private": true,
   "scripts": {
-    "dev": "ladle serve",
-    "build": "ladle build",
-    "start": "ladle preview"
+    "dev": "storybook dev -p 6006",
+    "build": "storybook build -o ./build",
+    "start": "serve build --listen 6006"
   },
   "dependencies": {
     "@aphrodite-ui/core": "workspace:*",
     "@aphrodite-ui/react": "workspace:*",
-    "@ladle/react": "^2.4.5",
     "autoprefixer": "^10.4.12",
     "postcss": "^8.4.18",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "serve": "^14.1.2",
     "tailwindcss": "^3.2.0"
   },
   "devDependencies": {
-    "@types/react": "^18.0.17",
-    "@types/react-dom": "^18.0.6"
+    "@babel/core": "^7.20.7",
+    "@storybook/addon-actions": "^7.0.0-beta.17",
+    "@storybook/addon-essentials": "^7.0.0-beta.17",
+    "@storybook/addon-interactions": "^7.0.0-beta.17",
+    "@storybook/addon-links": "^7.0.0-beta.17",
+    "@storybook/react": "^7.0.0-beta.17",
+    "@storybook/react-vite": "^7.0.0-beta.17",
+    "@storybook/testing-library": "^0.0.14-next.1",
+    "@types/react": "^18.0.26",
+    "@types/react-dom": "^18.0.9",
+    "@vitejs/plugin-react": "^3.0.0",
+    "babel-loader": "^8.3.0",
+    "storybook": "^7.0.0-beta.17",
+    "typescript": "^4.9.3",
+    "vite": "^4.0.0"
   }
 }

@@ -3,40 +3,40 @@ import {
   TagIconLeft,
   TagIconRight,
   TagLabel,
-  Tag,
-  TagProps
+  Tag
 } from '@aphrodite-ui/react';
-import type { Story } from '@ladle/react';
+import { Meta } from '@storybook/react';
 import Icon from './MockIcon';
 
-export default {
-  title: 'Components/Data Display/Tag'
-};
-
-export const Template: Story<TagProps> = (args) => <Tag {...args} />;
-
-Template.argTypes = {
-  size: {
-    control: { type: 'select' },
-    options: ['sm', 'md', 'lg']
+const meta: Meta<typeof Tag> = {
+  title: 'Components/Data Display/Tag',
+  component: Tag,
+  args: {
+    children: 'Tag'
   },
-  shape: {
-    control: { type: 'select' },
-    options: ['rounded', 'square']
-  },
-  variant: {
-    control: { type: 'select' },
-    options: ['solid', 'subtle', 'outline']
-  },
-  color: {
-    control: { type: 'select' },
-    options: ['primary', 'neutral', 'success', 'info', 'warning', 'danger']
+  argTypes: {
+    size: {
+      control: { type: 'select' },
+      options: ['sm', 'md', 'lg']
+    },
+    shape: {
+      control: { type: 'select' },
+      options: ['rounded', 'square']
+    },
+    variant: {
+      control: { type: 'select' },
+      options: ['solid', 'subtle', 'outline']
+    },
+    color: {
+      control: { type: 'select' },
+      options: ['primary', 'neutral', 'success', 'info', 'warning', 'danger']
+    }
   }
 };
 
-Template.args = {
-  children: 'Tag'
-};
+export default meta;
+
+export const Template = {};
 
 export const Variants = () => (
   <div className="space-y-8">
