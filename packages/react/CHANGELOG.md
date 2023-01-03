@@ -1,5 +1,15 @@
 # @aphrodite-ui/react
 
+## 0.2.0
+
+### Minor Changes
+
+- remove polymorphic component feature, by [@G3root](https://github.com/G3root) (See [#10](https://github.com/G3root/aphrodite-ui/pull/10))
+
+### Patch Changes
+
+- feat(react): add Tag Component, by [@G3root](https://github.com/G3root) (See [#9](https://github.com/G3root/aphrodite-ui/pull/9))
+
 ## 0.1.2
 
 ### Patch Changes
