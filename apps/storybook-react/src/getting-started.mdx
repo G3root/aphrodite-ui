@@ -1,0 +1,47 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Introduction/Getting Started" />
+
+# Getting Started
+
+### Prerequisite
+
+You need `PostCSS`, `autoprefixer` and `Tailwind CSS` installed.
+
+```bash
+npm install -D tailwindcss postcss autoprefixer
+```
+
+### installation
+
+Inside your React project directory, install Aphrodite UI by running the following:
+
+```
+npm install @aphrodite-ui/react @aphrodite-ui/core
+```
+
+### Setup
+
+1. Setup Tailwind CSS if not configured.
+
+```
+npx tailwindcss init
+```
+
+2. Configure your Tailwind CSS config file.
+
+```
+const { aphroditePlugin } = require('@aphrodite-ui/core');
+
+module.exports = {
+  content: [
+    './src/**/*.{js,ts,jsx,tsx}',
+    './node_modules/@aphrodite-ui/react/src/**/*.{js,ts,jsx,tsx}'
+  ],
+  darkMode: ['class', '[data-theme="dark"]'],
+  theme: {
+    extend: {}
+  },
+  plugins: [aphroditePlugin()]
+};
+```
